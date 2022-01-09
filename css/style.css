@@ -16,10 +16,10 @@
   --clr-dark: #383838;
   --clr-accent: #16e8bd;
 
-  --fs-h1: 3rem;
-  --fs-h2: 2.25rem;
-  --fs-h3: 1.25rem;
-  --fs-body: 1rem;
+  --fs-h1: 4rem;
+  --fs-h2: 3.25rem;
+  --fs-h3: 2.25rem;
+  --fs-body: 1.5rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -84,6 +84,7 @@ h3 {
 
   .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
   }
 }
 
@@ -102,6 +103,11 @@ h3 {
   background: ;
 }
 
+/* Lists */
+.list {
+  list-style: none;
+}
+
 /* form */
 
 .contact {
@@ -109,4 +115,54 @@ h3 {
 
 .contact__textarea {
   resize: none;
+}
+
+/* My work */
+.portfolio {
+  margin: 2rem 1rem;
+  gap: 2rem;
+}
+
+.section__title--work {
+  text-align: center;
+  margin: 2rem auto;
+  font-size: var(--fs-h2);
+}
+
+.portfolio__item {
+}
+
+.portfolio__item .portfolio--image {
+  max-height: 25rem;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.portfolio__item .portfolio--description {
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio__item {
+  }
+
+  .portfolio__item .portfolio--image {
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  .portfolio__item .portfolio--description {
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .portfolio__item {
+  }
+
+  .portfolio__item .portfolio--image {
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  .portfolio__item .portfolio--description {
+  }
 }
