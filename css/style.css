@@ -8,12 +8,14 @@
 :root {
   --ff-primary: "Source Sans Pro", sans-serif;
   --ff-secondary: "Source Code Pro", monospace;
+  --ff-logo: "Qwitcher Grypen", cursive;
 
   --fw-reg: 300;
   --fw-bold: 900;
 
   --clr-light: #fff;
   --clr-dark: #383838;
+  --clr-light-dark: #818181;
   --clr-accent: #16e8bd;
 
   --fs-h1: 4rem;
@@ -42,6 +44,10 @@ body {
   margin: 0;
 }
 
+section {
+  padding: 2rem;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -49,6 +55,10 @@ img {
 
 html {
   font-size: 62.5%;
+}
+
+strong {
+  font-weight: var(--fw-bold);
 }
 
 /* Typography */
@@ -70,16 +80,38 @@ h3 {
   font-size: var(--fs-h3);
 }
 
+.section__title {
+  margin-bottom: 0.25rem;
+}
+
+.section__title--intro {
+  font-weight: var(--fw-reg);
+}
+
+.section__title--intro strong {
+  display: block;
+}
+
+.section__subtitle {
+  margin: 0;
+  font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro {
+  background: var(--clr-accent);
+  font-family: var(--ff-secondary);
+}
+
 /* Grids */
 .grid {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 @media screen and (min-width: 768px) {
   .grid--2x2 {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    gap: 2rem;
   }
 
   .grid--1x3 {
@@ -91,7 +123,7 @@ h3 {
 @media screen and (min-width: 1024px) {
   .grid--1x4 {
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 2rem;
   }
 }
 
@@ -101,6 +133,10 @@ h3 {
   border-radius: 20px;
   border: none;
   background: var(--clr-accent);
+}
+
+.nav-btn {
+  height: fit-content;
 }
 
 /* Lists */
@@ -118,92 +154,242 @@ h3 {
   resize: none;
 }
 
-/* My work */
-.my-work {
-  background: var(--clr-dark);
-  height: 210rem;
+/* Header */
+.logo {
+  font-family: var(--ff-logo);
+  margin: 0;
 }
 
-.portfolio {
-  background: var(--clr-dark);
-  margin: 2rem 1rem;
-  gap: 2rem;
+.logo-txt {
+  margin: 0;
+  font-size: 8rem;
+  height: fit-content;
 }
 
-.section__title--work {
-  text-align: center;
-  margin: 2rem auto;
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  margin: 0;
+}
+
+.nav {
+  position: fixed;
+  background: var(--clr-dark);
   color: var(--clr-light);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
 }
 
-.portfolio__item .portfolio--image {
-  max-height: 25rem;
-  object-fit: cover;
-  overflow: hidden;
+.nav__list {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-.portfolio__item .portfolio--description {
-  padding: 1rem;
+.nav__link {
+  color: var(--clr-light);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h2);
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: var(--clr-accent);
+}
+
+.nav-toggle {
+  padding: 0.65em;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 1em;
+  z-index: 1000;
+}
+
+.hamburger {
+  position: relative;
+  display: block;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  background: var(--clr-dark);
+  width: 2em;
+  height: 3px;
+  border-radius: 1em;
+  transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.hamburger::before {
+  top: 6px;
+}
+.hamburger::after {
+  bottom: 6px;
+}
+
+/* Intro section */
+
+.intro {
+  position: relative;
+}
+
+.section__subtitle--intro {
+  text-align: center;
+  width: 20rem;
+}
+
+/* about me section */
+.about-me {
+  background-color: var(--clr-light-dark);
+  background-image: url(../images/services-bg.jpg);
+  background-size: cover;
+  background-blend-mode: multiply;
+  color: var(--clr-light);
+  text-align: center;
+}
+
+.section__title--about {
+  color: var(--clr-accent);
+  position: relative;
+}
+
+.section__title--about::after {
+  content: "";
+  display: block;
+  width: 3em;
+  height: 1px;
+  margin: 0.5em auto 1em;
+  opacity: 0.25;
   background: var(--clr-light);
 }
 
-.portfolio__item--tech {
-  text-align: center;
+.section__subtitle--about {
+  color: var(--clr-light);
 }
 
-.btn--portfolio {
-  margin-left: 1rem;
-}
-
-.btn--portfolio > a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.5rem;
-}
-
-.flex {
+.section-body--header {
   display: flex;
-  justify-content: space-evenly;
-  margin: 2rem 0;
+  justify-content: center;
+}
+
+.about-me__body {
+  margin: 4rem 1rem;
 }
 
 @media screen and (min-width: 768px) {
-  .my-work {
-    height: 110rem;
-    width: 100%;
+  .about-me__body {
+    max-width: 1000px;
+    margin: 4rem auto;
   }
 
-  .portfolio__item .portfolio--image {
-    object-fit: cover;
-    overflow: hidden;
+  .section__title--skills,
+  .section__title--languages,
+  .section__title--frameworks {
+    font-size: var(--fs-h2);
   }
 
-  .portfolio__item .portfolio--description {
-    height: 22rem;
-  }
-
-  .btn--portfolio {
-    margin-left: 4rem;
-    padding: 1rem 15rem;
+  .list__item {
+    font-size: var(--fs-h3);
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .my-work {
-    height: 55rem;
-    width: 100%;
-  }
+/* My Work */
+.my-work {
+  background: var(--clr-dark);
+}
 
-  .portfolio__item .portfolio--image {
-    max-height: 19rem;
-    object-fit: cover;
-    overflow: hidden;
-  }
+.portfolio-heading {
+  color: var(--clr-light);
+  text-align: center;
+  padding: 2rem 2rem;
+}
 
-  .portfolio__item .portfolio--description {
-  }
-  .btn--portfolio {
-    margin-left: 4rem;
-    padding: 1rem 15rem;
+.portfolio__item {
+  height: 45rem;
+  background: var(--clr-light);
+}
+
+.portfolio__image {
+  height: 20rem;
+  overflow: hidden;
+}
+
+.portfolio__desription {
+  height: 15rem;
+}
+
+.portfolio__body {
+  margin: 0;
+  font-size: 1.8rem;
+  padding: 2rem 2rem;
+}
+
+.portfolio__btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+}
+
+@media screen and (min-width: 768px) {
+}
+
+/* footer */
+
+.footer {
+  background: #111;
+  color: var(--clr-accent);
+  text-align: center;
+  padding: 2.5rem 0;
+  font-size: var(--fs-h3);
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  padding: 0;
+}
+
+.social-list__item {
+  margin: 0 0.5rem;
+}
+
+.social-list__link {
+  padding: 0.5em;
+}
+
+.footer a {
+  color: var(--clr-accent);
+}
+
+.social-list__link:hover {
+  opacity: 0.7;
+}
+
+@media screen and (min-width: 760px) {
+  .footer {
+    font-size: 2.5rem;
   }
 }
