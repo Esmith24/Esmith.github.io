@@ -22,13 +22,8 @@
 
 <body>
     <header>
-        <!--
-                <div class="logo">
-                <h2 class="logo-txt">es</h2>
-            </div>
-            -->
         <div class="logo">
-            <h2>&lt!-- <span class="logo-txt">es</span> --&gt</h2>
+            <p class="logo-txt"> es </p>
         </div>
         <button class="nav-btn nav-toggle" aria-label="toggle navigation">
             <span class="hamburger"></span>
@@ -154,6 +149,26 @@
         </div>
     </section>
 
+    <!----Contact---->
+    <section class="contact" id="contact">
+        <h2 class="section__title section__header">Contact Me!</h2>
+        <form action="">
+            <div class="section__body--name">
+                <label class="section__body--label for=" name">Name:</label>
+                <input class="section__body--input" id="name" type="text">
+            </div>
+            <div class="section__body--email">
+                <label class="section__body--label" for="email">Email:</label>
+                <input class="section__body--input" id="email" type="email">
+            </div>
+            <textarea class="contact__textarea" placeholder="Enter msg here..." name="contact__textarea" id="" cols="34"
+                rows="5"></textarea>
+            <div>
+                <button class="btn contact__button" type="submit">Send</button>
+            </div>
+        </form>
+    </section>
+
     <!----Footer---->
     <footer class="footer">
         <ul class="list social-list">
@@ -171,6 +186,8 @@
             </li>
         </ul>
     </footer>
+
+    <script src="js/main.js"></script>
 
 </body>
 

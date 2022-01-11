@@ -120,7 +120,7 @@ h3 {
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1260px) {
   .grid--1x4 {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
@@ -148,29 +148,82 @@ h3 {
 /* form */
 
 .contact {
+  margin: 3.5rem 2rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.section__header {
+  position: relative;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.section__header::after {
+  content: "";
+  display: block;
+  width: 35%;
+  height: 2px;
+  opacity: 0.5;
+  margin: 0.5em auto 1em;
+  background-color: var(--clr-dark);
+}
+
+.section__body--name {
+  margin-top: 1.5rem;
+}
+
+.section__body--label {
+  padding-right: 1rem;
+  font-size: 2rem;
+}
+
+.section__body--input {
+  border: none;
+  border-bottom: 1px solid #818181;
+  width: 22rem;
+  padding: 1rem 0;
+}
+
+.section__body--email {
+  margin-top: 1.5rem;
 }
 
 .contact__textarea {
   resize: none;
+  margin: 3rem auto;
+}
+
+.contact__button {
+  margin-top: 1.5rem;
+}
+
+@media screen and (min-width: 400px) {
+  .contact {
+    display: none;
+  }
 }
 
 /* Header */
-.logo {
-  font-family: var(--ff-logo);
-  margin: 0;
-}
-
-.logo-txt {
-  margin: 0;
-  font-size: 8rem;
-  height: fit-content;
-}
 
 header {
   display: flex;
   justify-content: space-between;
   padding: 1em;
   margin: 0;
+}
+
+.logo {
+  position: absolute;
+  font-family: var(--ff-logo);
+  margin: 0;
+  top: -3rem;
+}
+
+.logo-txt {
+  padding: 0;
+  margin: 0;
+  font-size: 6rem;
 }
 
 .nav {
@@ -226,7 +279,7 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-  background: var(--clr-dark);
+  background: var(--clr-accent);
   width: 2em;
   height: 3px;
   border-radius: 1em;
@@ -246,6 +299,26 @@ header {
 }
 .hamburger::after {
   bottom: 6px;
+}
+
+.nav-open .nav {
+  transform: translateX(0%);
+}
+
+.nav-open .nav-toggle {
+  position: fixed;
+}
+
+.nav-open .hamburger {
+  transform: rotate(0.635turn);
+}
+
+.nav-open .hamburger::before {
+  transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+  opacity: 0;
 }
 
 /* Intro section */
