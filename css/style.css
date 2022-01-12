@@ -198,7 +198,7 @@ h3 {
   margin-top: 1.5rem;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 450px) {
   .contact {
     display: none;
   }
@@ -325,6 +325,7 @@ header {
 
 .intro {
   position: relative;
+  margin: 3rem 0;
 }
 
 .section__subtitle--intro {
@@ -395,7 +396,7 @@ header {
 .portfolio-heading {
   color: var(--clr-light);
   text-align: center;
-  padding: 2rem 2rem;
+  padding: 2rem 0 4rem 0;
 }
 
 .portfolio__item {
