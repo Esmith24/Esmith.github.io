@@ -1,18 +1,19 @@
 <!----Contact---->
 <section class="contact" id="contact">
-    <h2 class="section__title section__title--contact">Contact Me!</h2>
+    <h2 class="section__title section__header">Contact Me!</h2>
     <form action="">
-        <div>
-            <label for="name">Name</label>
-            <input id="name" type="text">
+        <div class="section__body--name">
+            <label class="section__body--label for=" name">Name:</label>
+            <input class="section__body--input" id="name" type="text">
         </div>
-        <div>
-            <label for="email">Email</label>
-            <input id="email" type="email">
+        <div class="section__body--email">
+            <label class="section__body--label" for="email">Email:</label>
+            <input class="section__body--input" id="email" type="email">
         </div>
-        <textarea name="contact__textarea" id="" cols="30" rows="10"></textarea>
+        <textarea class="contact__textarea" placeholder="Enter msg here..." name="contact__textarea" id="" cols="34"
+            rows="5"></textarea>
         <div>
-            <button type="submit">Send</button>
+            <button class="btn contact__button" type="submit">Send</button>
         </div>
     </form>
 </section>
