@@ -22,6 +22,7 @@
 
 <body>
     <header>
+        <a class="skip-nav-link" href="#main-content">skip navigation</a>
         <div class="logo">
             <p class="logo-txt"> es </p>
         </div>
@@ -33,126 +34,130 @@
                 <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
                 <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
                 <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
-                <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!---- Introduction---->
-    <section class="intro" id="home">
-        <h1 class="section__title section__title--intro">Hi, I am <strong>Elliott Smith</strong></h1>
-        <p class="section__subtitle section__subtitle--intro">front-end dev</p>
-    </section>
+    <main id="main-content">
+        <!---- Introduction---->
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">Hi, I am <strong>Elliott Smith</strong></h1>
+            <p class="section__subtitle section__subtitle--intro">front-end dev</p>
+        </section>
 
-    <!----About me---->
-    <section class="about-me" id="about">
-        <h2 class="section__title section__title--about">About me</h2>
-        <p class="section__subtitle section__subtitle--about">Front-end developer who is passionate about writing code.
-        </p>
-        <div class="about-me__body grid grid--1x3">
-            <div class="section-body section-body__skills">
-                <header class="section-body--header">
-                    <h3 class="section__title section__title--skills">Skills</h3>
-                </header>
-                <ul class="list list--skills">
-                    <li class="list__item">Redux</li>
-                    <li class="list__item">SQL</li>
-                    <li class="list__item">Git</li>
-                    <li class="list__item">Rest Api</li>
-                    <li class="list__item">Axios</li>
-                    <li class="list__item">WordPress</li>
-                    <li class="list__item">Photoshop</li>
-                </ul>
-            </div>
-
-            <div class="section-body section-body__languages">
-                <header class="section-body--header">
-                    <h3 class="section__title section__title--languages">Languages</h3>
-                </header>
-                <ul class="list list--languages">
-                    <li class="list__item">Javascript</li>
-                    <li class="list__item">Python</li>
-                    <li class="list__item">HTML</li>
-                    <li class="list__item">CSS</li>
-                </ul>
-            </div>
-
-            <div class="section-body section-body__frameworks">
-                <header class="section-body--header">
-                    <h3 class="section__title section__title--frameworks">Frameworks</h3>
-                </header>
-                <ul class="list list--frameworks">
-                    <li class="list__item">React</li>
-                    <li class="list__item">Vue</li>
-                    <li class="list__item">Django</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!---- My Work---->
-    <section class="my-work" id="work">
-        <h2 class="portfolio-heading">My Projects</h2>
-        <div class="portfolio grid grid--2x2 grid--1x4">
-            <div class="portfolio__item">
-                <div class="portfolio__item portfolio__image">
-                    <img src="images/stock.png" alt="">
+        <!----About me---->
+        <section class="about-me" id="about">
+            <h2 class="section__title section__title--about">About me</h2>
+            <p class="section__subtitle section__subtitle--about">Front-end developer who is passionate about learning
+                new
+                technologies and becoming the best programmer I can be.
+            </p>
+            <div class="about-me__body grid grid--1x3">
+                <div class="section-body section-body__skills">
+                    <header class="section-body--header">
+                        <h3 class="section__title section__title--skills">Skills</h3>
+                    </header>
+                    <ul class="list list--skills">
+                        <li class="list__item">Redux</li>
+                        <li class="list__item">SQL</li>
+                        <li class="list__item">Git</li>
+                        <li class="list__item">Rest Api</li>
+                        <li class="list__item">Axios</li>
+                        <li class="list__item">WordPress</li>
+                        <li class="list__item">Photoshop</li>
+                    </ul>
                 </div>
 
-                <div class="portfolio__desription">
-                    <p class="portfolio__body">A full-stack finance website with custom stock tracker dashboard.
-                        Tech stack django,vue,rest api, javascript,html and css</p>
+                <div class="section-body section-body__languages">
+                    <header class="section-body--header">
+                        <h3 class="section__title section__title--languages">Languages</h3>
+                    </header>
+                    <ul class="list list--languages">
+                        <li class="list__item">Javascript</li>
+                        <li class="list__item">Python</li>
+                        <li class="list__item">HTML</li>
+                        <li class="list__item">CSS</li>
+                    </ul>
                 </div>
-                <div class="portfolio__btn-container">
-                    <button class="btn"><a href="https://github.com/Esmith24/pdx_capstone" target="__blank">To
-                            Code</a></button>
+
+                <div class="section-body section-body__frameworks">
+                    <header class="section-body--header">
+                        <h3 class="section__title section__title--frameworks">Frameworks</h3>
+                    </header>
+                    <ul class="list list--frameworks">
+                        <li class="list__item">React</li>
+                        <li class="list__item">Vue</li>
+                        <li class="list__item">Django</li>
+                    </ul>
                 </div>
             </div>
+        </section>
 
-            <div class="portfolio__item">
-                <div class="portfolio__item portfolio__image">
-                    <img src="images/cloud.png" alt="">
+        <!---- My Work---->
+        <section class="my-work" id="work">
+            <h2 class="portfolio-heading">My Projects</h2>
+            <div class="portfolio grid grid--2x2 grid--1x4">
+                <div class="portfolio__item">
+                    <div class="portfolio__item portfolio__image">
+                        <img src="images/stock.png" alt="">
+                    </div>
+
+                    <div class="portfolio__desription">
+                        <p class="portfolio__body">A full-stack finance website with custom stock tracker dashboard.
+                            Tech stack django,vue,rest api, javascript,html and css</p>
+                    </div>
+                    <div class="portfolio__btn-container">
+                        <a href="https://github.com/Esmith24/pdx_capstone" target="__blank"><button class="btn">To
+                                Code</button></a>
+                    </div>
                 </div>
 
-                <div class="portfolio__desription">
-                    <p class="portfolio__body">A fictional landing page for a cloud hosting company. In this project I
-                        implemented
-                        responsive
-                        HTML/CSS that looks great on mobile,tablet and desktop.</p>
+                <div class="portfolio__item">
+                    <div class="portfolio__item portfolio__image">
+                        <img src="images/cloud.png" alt="">
+                    </div>
+
+                    <div class="portfolio__desription">
+                        <p class="portfolio__body">A fictional landing page for a cloud hosting company. In this project
+                            I
+                            implemented
+                            responsive
+                            HTML/CSS that looks great on mobile,tablet and desktop.</p>
+                    </div>
+                    <div class="portfolio__btn-container">
+                        <a href="https://github.com/Esmith24/Cloud_Hosting" target="__blank"><button class="btn">To
+                                Code</button></a>
+                    </div>
                 </div>
-                <div class="portfolio__btn-container">
-                    <button class="btn"><a href="https://github.com/Esmith24/Cloud_Hosting" target="__blank">To
-                            Code</a></button>
+
+                <div class="portfolio__item">
+                    <div class="portfolio__item portfolio__image">
+                        <img src="images/under_construction.jpg" alt="">
+                    </div>
+
+                    <div class="portfolio__desription">
+                        <p class="portfolio__body">Project 3 Under Construction</p>
+                    </div>
+                    <div class="portfolio__btn-container">
+                        <button class="btn">To Code</button>
+                    </div>
+                </div>
+
+                <div class="portfolio__item">
+                    <div class="portfolio__item portfolio__image">
+                        <img src="images/under_construction.jpg" alt="">
+                    </div>
+
+                    <div class="portfolio__desription">
+                        <p class="portfolio__body">Project 4 Under construction</p>
+                    </div>
+                    <div class="portfolio__btn-container">
+                        <button class="btn">To Code</button>
+                    </div>
                 </div>
             </div>
-
-            <div class="portfolio__item">
-                <div class="portfolio__item portfolio__image">
-                    <img src="images/under_construction.jpg" alt="">
-                </div>
-
-                <div class="portfolio__desription">
-                    <p class="portfolio__body">Project 3 Under Construction</p>
-                </div>
-                <div class="portfolio__btn-container">
-                    <button class="btn">To Code</button>
-                </div>
-            </div>
-
-            <div class="portfolio__item">
-                <div class="portfolio__item portfolio__image">
-                    <img src="images/under_construction.jpg" alt="">
-                </div>
-
-                <div class="portfolio__desription">
-                    <p class="portfolio__body">Project 4 Under construction</p>
-                </div>
-                <div class="portfolio__btn-container">
-                    <button class="btn">To Code</button>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
 
     <!----Footer---->

@@ -33,6 +33,24 @@
   }
 }
 
+/* Accesbility */
+.skip-nav-link {
+  background-color: #16e8bd;
+  color: rgb(26, 25, 25);
+  padding: 0.75rem 0.75rem;
+  border-radius: 10px;
+  left: 6rem;
+  border: none;
+  outline: none;
+  position: absolute;
+  transform: translateY(-170%);
+  transition: transform 325ms ease-in;
+}
+
+.skip-nav-link:focus {
+  transform: translateY(0%);
+}
+
 /* General styling */
 
 body {
@@ -55,6 +73,7 @@ img {
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 strong {
@@ -133,6 +152,7 @@ h3 {
   border-radius: 20px;
   border: none;
   background: var(--clr-accent);
+  cursor: pointer;
 }
 
 .nav-btn {
@@ -325,7 +345,7 @@ header {
 
 .intro {
   position: relative;
-  margin: 3rem 0;
+  margin: 5rem 0;
 }
 
 .section__subtitle--intro {
